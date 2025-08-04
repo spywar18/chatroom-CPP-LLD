@@ -84,7 +84,7 @@ void Session::write(Message &message){
         bool header_decode = message.decodeHeader();
         if(header_decode){
             std::string body = message.getBody(); 
-            async_write(body, message.getBodyLength());
+            async_write(body, message.getNewbodyLength(body.length()));
         }else{
             std::cout<<"Message length exceeds the max length"<<std::endl;
         }

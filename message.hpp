@@ -8,8 +8,8 @@ class Message {
 
   public:
     Message(): bodyLength_(0) {}
-    enum { maxBytes = 512 };
-    enum { header = 4 };
+    static const size_t maxBytes = 512;
+    static const size_t header = 4;
 
     Message(std::string message) {
         bodyLength_ = getNewbodyLength(message.size());
@@ -60,4 +60,4 @@ class Message {
        size_t bodyLength_;
 };
 
-#endif MESSAGE_HPP
+#endif
