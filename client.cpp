@@ -3,8 +3,6 @@
 #include <boost/asio.hpp>
 
 using boost::asio::ip::tcp;
-
-
 void async_read(tcp::socket &socket) {
     auto buffer = std::make_shared<boost::asio::streambuf>();
     boost::asio::async_read_until(socket, *buffer, "\n",
