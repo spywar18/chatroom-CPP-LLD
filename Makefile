@@ -2,12 +2,10 @@ CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -g
 LDFLAGS = -pthread
 LDLIBS = -lboost_system -lboost_thread
-
-# Source files
+# Source 
 SERVER_SRC = chatRoom.cpp
 CLIENT_SRC = client.cpp
-
-# Object files
+# Object 
 SERVER_OBJ = $(SERVER_SRC:.cpp=.o)
 CLIENT_OBJ = $(CLIENT_SRC:.cpp=.o)
 
